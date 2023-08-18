@@ -1,4 +1,6 @@
 #Include"lists.h"
+
+
 /**
  * struct dlistint_s - doubly linked list
  * @n: integer
@@ -14,3 +16,17 @@ typedef struct dlistint_s
       struct dlistint_s *prev;
       struct dlistint_s *next;
 } dlistint_t;
+size_t print_dlistint(const dlistint_t *h)
+{
+    size_t node_count = 0;  // Initialize a variable to count the nodes
+
+    // Traverse the list and print each element
+    while (h != NULL)
+    {
+        printf("%d\n", h->n);  // Print the current element's value
+        h = h->next;           // Move to the next node
+        node_count++;          // Increment the node count
+    }
+
+    return node_count;  // Return the total number of nodes
+}
