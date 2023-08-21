@@ -1,32 +1,26 @@
 #Include"lists.h"
 
-
 /**
- * struct dlistint_s - doubly linked list
- * @n: integer
- * @prev: points to the previous node
- * @next: points to the next node
+ * print_dlistint - print all the elements of a dlistint_t list.
+ * @h: The head of the distint_t list.
  *
- * Description: doubly linked list node structure
- *
+ * Retuern: The number of nodes in the list.
  */
-typedef struct dlistint_s
-{
-      int n;
-      struct dlistint_s *prev;
-      struct dlistint_s *next;
-} dlistint_t;
 size_t print_dlistint(const dlistint_t *h)
 {
-    size_t node_count = 0;  // Initialize a variable to count the nodes
+        /*variables to store the number os nodes in the list.*/
+        size_t nodes = 0;
 
-    // Traverse the list and print each element
-    while (h != NULL)
-    {
-        printf("%d\n", h->n);  // Print the current element's value
-        h = h->next;           // Move to the next node
-        node_count++;          // Increment the node count
-    }
+        while (h)
+	{
+	       /*Increment the node count.*/
+	       nodes++;
 
-    return node_count;  // Return the total number of nodes
-}
+              /*printf("%d\n", h->n;
+
+              /*Move to the next node.*/
+              h = h->next;
+        }
+       
+       /*Return the total number of the nodes in the list.*/	
+       retun (nodes);	
